@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday My Love 💖</title>
+  <meta name="description" content="A special birthday website made with all my love for the most precious person in my life." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💖</text></svg>" />
+</head>
+<body>
+  <!-- Floating Hearts Canvas -->
+  <canvas id="heartsCanvas"></canvas>
+
+  <!-- Music Control -->
+  <div class="music-control" id="musicControl">
+    <button id="musicBtn" aria-label="Toggle music">
+      <span class="music-icon">🎵</span>
+      <span class="music-status">Play Our Song</span>
+    </button>
+    <audio id="bgMusic" loop preload="auto">
+      <!-- Add your song: place a file named song.mp3 in assets/music/ -->
+      <source src="assets/music/song.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+
+  <!-- Entry Overlay -->
+  <div class="entry-overlay" id="entryOverlay">
+    <div class="entry-content">
+      <div class="sparkle">✨</div>
+      <h1 class="entry-title">A Little Something Special...</h1>
+      <p class="entry-subtitle">Made with all my heart for you</p>
+      <button class="enter-btn" id="enterBtn">
+        <span>Open Your Gift 🎁</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <main id="mainContent" class="hidden">
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+      <div class="hero-bg"></div>
+      <div class="hero-content">
+        <p class="hero-greeting">Happy Birthday</p>
+        <h1 class="hero-name">My Everything</h1>
+        <p class="hero-tagline">You are the most precious part of my life</p>
+        <div class="hero-hearts">
+          <span>💕</span><span>💖</span><span>💗</span>
+        </div>
+        <div class="scroll-hint">
+          <span>Scroll to explore</span>
+          <div class="arrow">↓</div>
+        </div>
+      </div>
+      <div class="floating-photo">
+        <!-- Replace with her photo: assets/images/her-photo.jpg -->
+        <div class="photo-frame">
+          <img src="assets/images/her-photo.jpg" alt="My Love" onerror="this.src='https://picsum.photos/seed/love/400/500'; this.onerror=null;" />
+          <div class="photo-glow"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Special Section -->
+    <section class="section why-special" id="why">
+      <div class="container">
+        <h2 class="section-title">
+          <span class="title-icon">✨</span>
+          Why You Are So Special
+          <span class="title-icon">✨</span>
+        </h2>
+        <p class="section-subtitle">Every little thing about you makes my world brighter</p>
+        
+        <div class="reasons-grid">
+          <div class="reason-card" data-delay="0">
+            <div class="reason-icon">🌟</div>
+            <h3>Your Smile</h3>
+            <p>It lights up my darkest days and makes everything feel possible. One smile from you and the whole world feels right.</p>
+          </div>
+          <div class="reason-card" data-delay="100">
+            <div class="reason-icon">💖</div>
+            <h3>Your Heart</h3>
+            <p>The kindest, most beautiful soul I've ever known. You love so deeply and make everyone around you feel valued.</p>
+          </div>
+          <div class="reason-card" data-delay="200">
+            <div class="reason-icon">🌈</div>
+            <h3>Your Presence</h3>
+            <p>Just being near you feels like home. You are my peace, my excitement, and my favorite place to be.</p>
+          </div>
+          <div class="reason-card" data-delay="300">
+            <div class="reason-icon">🦋</div>
+            <h3>Your Strength</h3>
+            <p>The way you face life with grace and courage inspires me every single day. You are stronger than you know.</p>
+          </div>
+          <div class="reason-card" data-delay="400">
+            <div class="reason-icon">🌙</div>
+            <h3>Your Dreams</h3>
+            <p>I want to be there for every dream you chase. Supporting you is one of the greatest joys of my life.</p>
+          </div>
+          <div class="reason-card" data-delay="500">
+            <div class="reason-icon">💫</div>
+            <h3>Just Being You</h3>
+            <p>There is no one else like you in this universe. You are uniquely, perfectly, wonderfully you — and I am so lucky.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Memories Gallery -->
+    <section class="section memories" id="memories">
+      <div class="container">
+        <h2 class="section-title">
+          <span class="title-icon">📸</span>
+          Our Beautiful Moments
+        </h2>
+        <p class="section-subtitle">Every memory with you is a treasure I hold close</p>
+        
+        <div class="gallery">
+          <!-- Replace these with your real photos: assets/images/memory1.jpg etc. -->
+          <div class="gallery-item" data-caption="Our first adventure together">
+            <img src="assets/images/memory1.jpg" alt="Memory 1" onerror="this.src='https://picsum.photos/seed/mem1/600/400'; this.onerror=null;" />
+            <div class="gallery-overlay">
+              <span>Our first adventure</span>
+            </div>
+          </div>
+          <div class="gallery-item" data-caption="That perfect sunset">
+            <img src="assets/images/memory2.jpg" alt="Memory 2" onerror="this.src='https://picsum.photos/seed/mem2/600/400'; this.onerror=null;" />
+            <div class="gallery-overlay">
+              <span>That perfect sunset</span>
+            </div>
+          </div>
+          <div class="gallery-item" data-caption="Laughing until we cried">
+            <img src="assets/images/memory3.jpg" alt="Memory 3" onerror="this.src='https://picsum.photos/seed/mem3/600/400'; this.onerror=null;" />
+            <div class="gallery-overlay">
+              <span>Laughing until we cried</span>
+            </div>
+          </div>
+          <div class="gallery-item" data-caption="Quiet moments that mean everything">
+            <img src="assets/images/memory4.jpg" alt="Memory 4" onerror="this.src='https://picsum.photos/seed/mem4/600/400'; this.onerror=null;" />
+            <div class="gallery-overlay">
+              <span>Quiet moments</span>
+            </div>
+          </div>
+          <div class="gallery-item" data-caption="Celebrating little victories">
+            <img src="assets/images/memory5.jpg" alt="Memory 5" onerror="this.src='https://picsum.photos/seed/mem5/600/400'; this.onerror=null;" />
+            <div class="gallery-overlay">
+              <span>Little victories</span>
+            </div>
+          </div>
+          <div class="gallery-item" data-caption="Just us being us">
+            <img src="assets/images/memory6.jpg" alt="Memory 6" onerror="this.src='https://picsum.photos/seed/mem6/600/400'; this.onerror=null;" />
+            <div class="gallery-overlay">
+              <span>Just us being us</span>
+            </div>
+          </div>
+        </div>
+        <p class="gallery-note">💡 Tip: Replace the placeholder images with your real photos in the <code>assets/images/</code> folder</p>
+      </div>
+    </section>
+
+    <!-- Love Letter -->
+    <section class="section love-letter" id="letter">
+      <div class="container">
+        <h2 class="section-title">
+          <span class="title-icon">💌</span>
+          A Letter From My Heart
+        </h2>
+        
+        <div class="letter-paper">
+          <div class="letter-content">
+            <p class="letter-date">On your special day...</p>
+            
+            <p>My dearest love,</p>
+            
+            <p>There are a million ways I could try to say how much you mean to me, and still none of them would be enough. You are not just someone I love — you are the person who makes my life feel complete.</p>
+            
+            <p>Every morning I wake up grateful that I get to share this life with you. Your laugh is my favorite sound. Your presence is my favorite place. The way you care, the way you dream, the way you love... it all makes me fall for you more every single day.</p>
+            
+            <p>I want you for all of my life. Not just the easy days, but every day. The quiet ones, the chaotic ones, the ones where we build something beautiful together. You are the most precious gift I have ever been given, and I promise to cherish you, protect your heart, and choose you — again and again, for as long as I live.</p>
+            
+            <p>Happy Birthday, my love. May this year bring you every bit of joy, peace, and magic that you so freely give to the world (and especially to me).</p>
+            
+            <p class="letter-sign">Forever yours,<br><span class="signature">With all my love 💖</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Forever Section -->
+    <section class="section forever" id="forever">
+      <div class="container">
+        <h2 class="section-title">
+          <span class="title-icon">♾️</span>
+          Forever With You
+        </h2>
+        <p class="section-subtitle">This is only the beginning of our story</p>
+        
+        <div class="promises">
+          <div class="promise-item">
+            <div class="promise-number">01</div>
+            <div class="promise-text">
+              <h3>I will always choose you</h3>
+              <p>In every season, every challenge, every ordinary Tuesday — you are my choice.</p>
+            </div>
+          </div>
+          <div class="promise-item">
+            <div class="promise-number">02</div>
+            <div class="promise-text">
+              <h3>I will grow with you</h3>
+              <p>Side by side, learning, changing, becoming better versions of ourselves — together.</p>
+            </div>
+          </div>
+          <div class="promise-item">
+            <div class="promise-number">03</div>
+            <div class="promise-text">
+              <h3>I will protect our love</h3>
+              <p>With honesty, patience, kindness, and the kind of effort that never runs out.</p>
+            </div>
+          </div>
+          <div class="promise-item">
+            <div class="promise-number">04</div>
+            <div class="promise-text">
+              <h3>I will make you feel cherished</h3>
+              <p>Every day. In big ways and small ways. You deserve to feel how precious you are.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="final-message">
+          <p class="big-love">I love you more than words could ever hold.</p>
+          <p class="forever-text">You are my today, my tomorrow, and every forever after.</p>
+          <button class="surprise-btn" id="surpriseBtn">Tap for a little magic ✨</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-hearts">💕 💖 💗 💓 💞</div>
+      <p>Made with endless love, just for you</p>
+      <p class="footer-note">Happy Birthday, my most precious person 🎂</p>
+    </footer>
+  </main>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose">×</button>
+    <img id="lightboxImg" src="" alt="Memory" />
+    <p id="lightboxCaption"></p>
+  </div>
+
+  <!-- Confetti Canvas -->
+  <canvas id="confettiCanvas"></canvas>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
